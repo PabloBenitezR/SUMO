@@ -14,7 +14,8 @@
 # @file    runner.py
 # @author  Manuel Hernandez Rosales
 # @author  Pablo Benitez
-# @date    2023-09-20
+# @date    2023-10-12
+
 
 from __future__ import absolute_import
 from __future__ import print_function
@@ -36,6 +37,49 @@ from sumolib import checkBinary
 import traci
 import math
 import random
+import re
+
+#begin and end time of edges closed
+bt=10.0
+et=1000.0
+
+#edges closed
+edgesclosed="B2C2 C2B2"
+
+#vehicles disallowed
+vehdisa="private"
+
+
+def closingedges():
+    ar=edgesclosed.split(' ')
+    h = open ('./closededges.add.xml','w')
+    h.write("""<?xml version="1.0" encoding="UTF-8"?>\n<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">\n""")
+    h.write("<rerouter id='rr1' edges='""" + edgesclosed + "' pos='194.00,195.40' probability='1'>\n")
+    h.write("<interval begin='" + str(bt) + "' end='" + str(et) + "'>\n")
+    for a in ar:
+        h.write("<closingReroute id='" + a + "' allow='" + vehdisa + "'/>\n")
+    h.write("</interval>\n")
+    h.write("</rerouter>\n")
+    h.write("""</additional>""")
+    h.close
+
+def newroutes():
+    h = open('./trips.trips.xml', 'r')
+    l = open('./ejbloqueo.rou.xml', 'w')
+    ar=edgesclosed.split(' ')
+    for f in h:
+        for via in ar:
+            if  f.find(via)>=0:
+                    f=f.replace(via, "A1B1")
+        l.write(f)            
+    h.close
+    l.close
+
+def createejbloqueo():
+    h = open ('./ejbloqueo.sumocfg','w')
+    h.write("<?xml version='1.0' encoding='UTF-8'?>\n<configuration xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='http://sumo.dlr.de/xsd/sumoConfiguration.xsd'>\n<input>\n<net-file value='ejemplo.net.xml'/>\n<route-files value='ejbloqueo.rou.xml'/>\n<additional-files value='closededges.add.xml'/>\n</input>\n</configuration>")
+    h.close()
+
 
 def run():
     step = 0
@@ -60,12 +104,16 @@ def get_options():
 # this is the main entry point of this script
 if __name__ == "__main__":
     options = get_options()
+
+    closingedges()
+    newroutes()
+    createejbloqueo()
     
     if options.nogui:
         sumoBinary = checkBinary('sumo')
     else:
         sumoBinary = checkBinary('sumo-gui')
 
-    traci.start([sumoBinary, "-c", "ejemplo.sumocfg",
+    traci.start([sumoBinary, "-c", "ejbloqueo.sumocfg",
                              "--tripinfo-output", "tripinfo.xml"])
     run()

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+<rerouter id='rr1' edges='B2C2 C2B2' pos='194.00,195.40' probability='1'>
+<interval begin='10.0' end='1000.0'>
+<closingReroute id='B2C2' allow='private'/>
+<closingReroute id='C2B2' allow='private'/>
+</interval>
+</rerouter>
+</additional>

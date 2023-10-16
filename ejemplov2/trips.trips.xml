@@ -6,9 +6,7 @@
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <trip id="0" depart="0.00" from="D0E0" to="A1A0"/>
-    <trip id="1" depart="1.00" from="B2B3" to="B1B0">
-        <stop lane="B2C2_0" startPos="0" endPos="10" duration="200.00"/>
-    </trip>
+    <trip id="1" depart="1.00" from="B2B3" to="B1B0"/>
     <trip id="2" depart="2.00" from="D2D3" to="D1D2"/>
     <trip id="3" depart="3.00" from="E1E2" to="A2A3"/>
     <trip id="4" depart="4.00" from="C0D0" to="A1A0"/>
