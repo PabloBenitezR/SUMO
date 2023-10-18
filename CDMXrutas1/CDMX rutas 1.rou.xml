@@ -3441,20 +3441,3 @@
     <trip id="veh2289" type="veh_passenger" depart="359.73" departLane="best" from="1168452026#0" to="24846907#6"/>
     <trip id="veh2290" type="veh_passenger" depart="359.89" departLane="best" from="854269186#0" to="617831539#4"/>
 </routes>
-   <rerouter id="<REROUTER_ID>" edges="<EDGE_ID>[;<EDGE_ID>]*" [probability="<PROBABILITY>"]>
-      <interval begin="<BEGIN_TIME>" end="<END_TIME>">
-         ... action description ...
-      </interval>
-
-      ... further intervals ...
-   </rerouter>
-
-   ... further rerouters ...
-<rerouter>
-   <interval begin="<60>" end="<1000>">
-      <closingReroute id="<616921713#6>"/>
-   </interval>
-
-   ... further intervals ...
-
-</rerouter>

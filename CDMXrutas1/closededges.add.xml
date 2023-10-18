@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+<rerouter id='rr1' edges='616921713#6 618028623#12 79431129 -124181617#1 -124181617#3 -124181617#2 846008895' pos='194.00,195.40' probability='1'>
+<interval begin='60.0' end='3600.0'>
+<closingReroute id='616921713#6' allow='private'/>
+<closingReroute id='618028623#12' allow='private'/>
+<closingReroute id='79431129' allow='private'/>
+<closingReroute id='-124181617#1' allow='private'/>
+<closingReroute id='-124181617#3' allow='private'/>
+<closingReroute id='-124181617#2' allow='private'/>
+<closingReroute id='846008895' allow='private'/>
+</interval>
+</rerouter>
+</additional>
