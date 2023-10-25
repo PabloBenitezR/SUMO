@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2023-09-25 13:09:29 by Eclipse SUMO netedit Version 1.18.0
+<!-- generated on 2023-10-16 10:28:20 by Eclipse SUMO netedit Version 1.18.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
-        <sumocfg-file value="C:\Users\mrosa\ejemplo\ejemplo.sumocfg"/>
-        <route-files value="C:\Users\mrosa\ejemplo\trips.trips.xml"/>
-        <sumo-net-file value="C:\Users\mrosa\ejemplo\ejemplo.net.xml"/>
+        <sumocfg-file value="C:\Users\mrosa\OneDrive - UNAM\Documentos\PUEC\Secretaria Tecnica\Investigacion\Movilidad y SUMO\Proyecto bloqueos y manejo de transito\desarrollo\SUMO\ejemplov2\ejemplo.sumocfg"/>
+        <route-files value="C:\Users\mrosa\OneDrive - UNAM\Documentos\PUEC\Secretaria Tecnica\Investigacion\Movilidad y SUMO\Proyecto bloqueos y manejo de transito\desarrollo\SUMO\ejemplov2\trips.trips.xml"/>
+        <sumo-net-file value="C:\Users\mrosa\OneDrive - UNAM\Documentos\PUEC\Secretaria Tecnica\Investigacion\Movilidad y SUMO\Proyecto bloqueos y manejo de transito\desarrollo\SUMO\ejemplov2\ejemplo.net.xml"/>
     </input>
 
     <output>
-        <output-file value="C:\Users\mrosa\ejemplo\ejemplo.net.xml"/>
+        <output-file value="C:\Users\mrosa\OneDrive - UNAM\Documentos\PUEC\Secretaria Tecnica\Investigacion\Movilidad y SUMO\Proyecto bloqueos y manejo de transito\desarrollo\SUMO\ejemplov2\ejemplo.net.xml"/>
     </output>
 
     <processing>

@@ -73,21 +73,11 @@ def newroutes():
     h.close
     l.close
 
-def newroutesp():
-    h = open('./osm.pedestrian.rou.xml', 'r')
-    l = open('./ejbloqueo.rou.xml', 'w')
-    ar=edgesclosed.split(' ')
-    for f in h:
-        for via in ar:
-            if  f.find(via)>=0:
-                    f=f.replace(via, "618106730#3")
-        l.write(f)            
-    h.close
-    l.close    
+
 
 def createejbloqueo():
     h = open ('./ejbloqueo.sumocfg','w')
-    h.write("<?xml version='1.0' encoding='UTF-8'?>\n<configuration xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='http://sumo.dlr.de/xsd/sumoConfiguration.xsd'>\n<input>\n<net-file value='osm.net.xml'/>\n<route-files value='ejbloqueo.rou.xml'/>\n<additional-files value='closededges.add.xml'/>\n</input>\n</configuration>")
+    h.write("<?xml version='1.0' encoding='UTF-8'?>\n<configuration xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='http://sumo.dlr.de/xsd/sumoConfiguration.xsd'>\n<input>\n<net-file value='osm.net.xml.gz'/>\n<route-files value='ejbloqueo.rou.xml'/>\n<additional-files value='closededges.add.xml'/>\n</input>\n</configuration>")
     h.close()
 
 def run():
@@ -116,7 +106,6 @@ if __name__ == "__main__":
 
     closingedges()
     newroutes()
-    newroutesp()
     createejbloqueo()
     
     if options.nogui:
@@ -125,5 +114,5 @@ if __name__ == "__main__":
         sumoBinary = checkBinary('sumo-gui')
 
     traci.start([sumoBinary, "-c", "ejbloqueo.sumocfg",
-                             "--tripinfo-output", "tripinfo.xml"])
+                             "--tripinfo-output", "tripinfo.xml", "--ignore-route-errors", "--time-to-teleport", "-1"])
     run()
