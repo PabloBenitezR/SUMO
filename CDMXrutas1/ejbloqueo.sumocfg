@@ -4,5 +4,8 @@
 <net-file value='osm.net.xml.gz'/>
 <route-files value='ejbloqueo.rou.xml'/>
 <additional-files value='closededges.add.xml'/>
+ <pedestrian.model value="jupedsim"/>
+        <ignore-route-errors value="true"/>
+
 </input>
 </configuration>
