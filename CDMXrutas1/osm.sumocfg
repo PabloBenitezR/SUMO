@@ -9,6 +9,10 @@
         <net-file value="osm.net.xml.gz"/>
         <route-files value="CDMX%20rutas%201.rou.xml"/>
         <additional-files value="osm.poly.xml.gz"/>
+        <pedestrian.model value="jupedsim"/>
+        <ignore-route-errors value="true"/>
     </input>
+
+
 
 </configuration>
