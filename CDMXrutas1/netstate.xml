@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-05-12 12:35:14 by Eclipse SUMO GUI Version v1_19_0+0016-8f48a0f57b6
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\ST\Desktop\S UMO\SUMO\CDMXrutas1\osm.net.xml.gz"/>
+        <route-files value="C:\Users\ST\Desktop\S UMO\SUMO\CDMXrutas1\ejbloqueo.rou.xml"/>
+        <additional-files value="C:\Users\ST\Desktop\S UMO\SUMO\CDMXrutas1\closededges.add.xml"/>
+    </input>
+
+    <output>
+        <full-output value="C:\Users\ST\Desktop\S UMO\SUMO\CDMXrutas1\netstate.xml"/>
+    </output>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+</configuration>
+-->
+
+<full-export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/full_file.xsd">
+</full-export>
