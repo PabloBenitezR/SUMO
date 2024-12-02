@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+<rerouter id='rr1' edges='616921713#6 616921713#7 616921713#8 616921713#10 616921713#11 616921713#12 616921713#14 616921713#15 1135302411#0 618028624#1 421567701#0 421567701#1 24850149#0 24850149#1 24850149#2 24850149#3 24850149#4' pos='194.00,195.40' probability='1'>
+<interval begin='60.0' end='3600.0'>
+<closingReroute id='616921713#6' allow='private'/>
+<closingReroute id='616921713#7' allow='private'/>
+<closingReroute id='616921713#10' allow='private'/>
+<closingReroute id='616921713#8' allow='private'/>
+<closingReroute id='616921713#11' allow='private'/>
+<closingReroute id='616921713#12' allow='private'/>
+<closingReroute id='616921713#14' allow='private'/>
+<closingReroute id='616921713#15' allow='private'/>
+<closingReroute id='616921713#16' allow='private'/>
+<closingReroute id='616921713#17' allow='private'/>
+<closingReroute id='1135302411#0' allow='private'/>
+<closingReroute id='618028624#1' allow='private'/>
+<closingReroute id='421567701#0' allow='private'/>
+<closingReroute id='421567701#1' allow='private'/>
+<closingReroute id='24850149#0' allow='private'/>
+<closingReroute id='24850149#1' allow='private'/>
+<closingReroute id='24850149#2' allow='private'/>
+<closingReroute id='24850149#3' allow='private'/>
+<closingReroute id='24850149#4' allow='private'/>
+</interval>
+</rerouter>
+</additional>
